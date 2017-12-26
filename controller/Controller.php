@@ -1,5 +1,5 @@
 <?php
-$path = "/var/www/html/LFS";
+ $path = "/var/www/html/LFS";
 include_once($path."/model/Model.php");
 
 class Controller {

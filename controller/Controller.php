@@ -1,5 +1,5 @@
 <?php
-include_once(dirname(__DIR__)."/model/Model.php");
+include_once($path."/model/Model.php");
 
 class Controller {
 	public $model;
@@ -16,13 +16,13 @@ class Controller {
 		{
 			// no special book is requested, we'll show a list of all available books
 			$response = $this->model->getTeams();
-			include dirname(__DIR__).'/view/teamList.php';
+			include $path.'/view/teamList.php';
 		}
 		else
 		{
 			// show the requested book
 			$book = $this->model->getTeam($_GET['team']);
-			include dirname(__DIR__).'/view/viewTeam.php';
+			include $path.'/view/viewTeam.php';
 		}
 	}
 }

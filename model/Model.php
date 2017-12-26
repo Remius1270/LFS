@@ -38,14 +38,14 @@ class Model {
 		}
 	}
 
-	public function getTeam($id)
+	public function getTeam()
 	{
 
 				$curl = curl_init();
 
 				curl_setopt_array($curl, array(
 					CURLOPT_PORT => "8080",
-					CURLOPT_URL => "http://159.89.1.213:8080/teams/".$id,
+					CURLOPT_URL => "http://159.89.1.213:8080/teams/".$_GET['teamID'],
 					CURLOPT_RETURNTRANSFER => true,
 					CURLOPT_ENCODING => "",
 					CURLOPT_MAXREDIRS => 10,
@@ -67,7 +67,6 @@ class Model {
 				if ($err) {
 					echo "cURL Error #:" . $err;
 				} else {
-					echo $response;
 					$response = json_decode($response);
 					return $response;
 				}

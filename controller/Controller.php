@@ -17,13 +17,13 @@ class Controller {
 		{
 			// no special book is requested, we'll show a list of all available books
 			$response = $this->model->getTeams();
-			include $path.'/view/teamList.php';
+			include '/var/www/html/LFS/view/teamList.php';
 		}
 		else
 		{
 			// show the requested book
 			$book = $this->model->getTeam($_GET['team']);
-			include $path.'/view/viewTeam.php';
+			include '/var/www/html/LFS/view/viewTeam.php';
 		}
 	}
 }

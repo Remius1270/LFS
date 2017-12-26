@@ -376,7 +376,7 @@
 										<?php
 											foreach ($response as &$team)
 											{
-												echo '<tr role="row"><td  rowspan="1" colspan="1"><img src="'.$team->logo.'" width="42" height="42"></td><td><a href="index.php?team='.$team->_id.'">'.$team->name.'</a></td><td>'.$team->elo.'</td><td>NONE</td></tr>';
+												echo '<tr role="row"><td  rowspan="1" colspan="1"><img src="'.$team->logo.'" width="42" height="42"></td><td><a href="team.php?teamID='.$team->_id.'">'.$team->name.'</a></td><td>'.$team->elo.'</td><td>NONE</td></tr>';
 											}
 										?>
                   </tbody>

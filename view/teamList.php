@@ -1,5 +1,5 @@
 <?php
-  path = "/var/www/html/LFS";
+  $path = "/var/www/html/LFS";
  ?>
 <!DOCTYPE html>
 <html>

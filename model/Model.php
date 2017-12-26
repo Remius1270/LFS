@@ -38,14 +38,16 @@ class Model {
 		}
 	}
 
-	public function getTeam()
+	public function getTeam($id)
 	{
 
 				$curl = curl_init();
 
+				$url = "http://159.89.1.213:8080/teams/".$id;
+
 				curl_setopt_array($curl, array(
 					CURLOPT_PORT => "8080",
-					CURLOPT_URL => "http://159.89.1.213:8080/teams/".$_GET['teamID'],
+					CURLOPT_URL => $url,
 					CURLOPT_RETURNTRANSFER => true,
 					CURLOPT_ENCODING => "",
 					CURLOPT_MAXREDIRS => 10,

@@ -45,6 +45,8 @@ class Model {
 
 				$url = "http://159.89.1.213:8080/teams/".$id;
 
+				echo $url;
+
 				curl_setopt_array($curl, array(
 					CURLOPT_PORT => "8080",
 					CURLOPT_URL => $url,

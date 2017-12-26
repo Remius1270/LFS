@@ -22,7 +22,7 @@ class Controller {
 		else if(isset($_GET['teamID']))
 		{
 			// show the requested book
-			$response = $this->model->getTeam($_GET['team']);
+			$response = $this->model->getTeam($_GET['teamID']);
 			include '/var/www/html/LFS/view/team.php';
 		}
 

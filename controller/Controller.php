@@ -23,7 +23,7 @@ class Controller {
 		{
 			// show the requested book
 			$book = $this->model->getTeam($_GET['team']);
-			include '/var/www/html/LFS/view/viewTeam.php';
+			include '/var/www/html/LFS/view/team.php';
 		}
 
 	}

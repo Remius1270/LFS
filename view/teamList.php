@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 
+=======
+<?php
+  path = "/var/www/html/LFS";
+ ?>
+>>>>>>> parent of 52f5663... //
 <!DOCTYPE html>
 <html>
 <head>

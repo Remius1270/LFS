@@ -67,7 +67,7 @@ class Model {
 				if ($err) {
 					echo "cURL Error #:" . $err;
 				} else {
-					
+					echo $response;
 					$response = json_decode($response);
 					return $response;
 				}

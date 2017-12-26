@@ -1,5 +1,5 @@
 <?php
-  echo "jshdqksd";
-  echo $response;
+
+  var_dump($response);
 
  ?>

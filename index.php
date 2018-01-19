@@ -4,7 +4,7 @@ ini_set('display_errors', '1');
 
 $path = "/var/www/html/LFS";
 
-	include_once($path."/controller/Controller.php");
+	include_once("./controller/Controller.php");
 
 	$controller = new Controller();
 	$controller->invoke();

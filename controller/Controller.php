@@ -1,6 +1,5 @@
 <?php
- $path = "/var/www/html/LFS";
-include_once($path."/model/Model.php");
+include_once("./model/Model.php");
 
 class Controller {
 	public $model;
@@ -17,13 +16,13 @@ class Controller {
 		{
 			// no special book is requested, we'll show a list of all available books
 			$response = $this->model->getTeams();
-			include '/var/www/html/LFS/view/teamList.php';
+			include './view/teamList.php';
 		}
 		else if(isset($_GET['teamID']))
 		{
 			// show the requested book
 			$response = $this->model->getTeam($_GET['teamID']);
-			include '/var/www/html/LFS/view/team.php';
+			include './view/team.php';
 		}
 
 	}

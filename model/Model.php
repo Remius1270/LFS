@@ -1,12 +1,11 @@
 <?php
 
-include_once("/var/www/html/LFS/model/Team.php");
+include_once("./model/Team.php");
 
 class Model {
 	public function getTeams()
 	{
 		// here goes some hardcoded values to simulate the database
-
 		$curl = curl_init();
 
 		curl_setopt_array($curl, array(
@@ -40,12 +39,8 @@ class Model {
 
 	public function getTeam($id)
 	{
-
 				$curl = curl_init();
-
 				$url = "http://159.89.1.213:8080/teams/".$id;
-
-				echo $url;
 
 				curl_setopt_array($curl, array(
 					CURLOPT_PORT => "8080",
@@ -62,12 +57,9 @@ class Model {
 						"postman-token: a5933d5e-d216-c695-f36d-b47ed399b14b"
 					),
 				));
-
 				$response = curl_exec($curl);
 				$err = curl_error($curl);
-
 				curl_close($curl);
-
 				if ($err) {
 					echo "cURL Error #:" . $err;
 				} else {

@@ -1,8 +1,0 @@
-@font-face {
-  font-family: "OW";
-  src: url('css/koverwatch.ttf') format("truetype");
-}
-
-table{
-  font-family: 'OW'!important;
-}

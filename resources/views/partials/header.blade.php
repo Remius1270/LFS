@@ -1,4 +1,4 @@
-
+@extends('partials.htmlheaders')
 <body>
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
@@ -15,7 +15,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        Lightning Fast Scrim
                     </a>
                 </div>
 

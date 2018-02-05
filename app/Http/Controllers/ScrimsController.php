@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Auth;
+use App\Scrim;
+use App\Team;
 use Illuminate\Http\Request;
 
 class ScrimsController extends Controller
@@ -15,6 +17,25 @@ class ScrimsController extends Controller
  public function add()
  {
    return view('add');
+ }
+
+ public function askscrim($team_id,$scrim_date)
+ {
+   $scrim = new Scrim();
+   $scrim->id_team_asked = $team_id;
+   $scrim->id_team_requesting = Auth::user()->id_team;
+   $scrim->scrim_date = $scrim_date;
+   $scrim->scrim_time = 0;
+   $scrim->status = "pending";
+   $scrim->save();
+
+   $team = new TeamsController();
+   $teams = $team->get_teams();
+   //add notification to requested teams
+   return view('teams',[
+     'scrim' => 'true',
+     'team' => $teams
+   ]);
  }
 
  public function create(Request $request)

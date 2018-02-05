@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -20,3 +21,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::get('/nik','TeamsController@get_teams');
+
+Route::get('/datepick/{team_id}','TeamsController@datepick');
+
+Route::get('/datepick/{team_id}/{scrim_date}','ScrimsController@askscrim');

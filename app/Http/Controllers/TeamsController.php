@@ -20,6 +20,13 @@ class TeamsController extends Controller
   }
  }
 
+ public function datepick($team_id)
+ {
+   $team = DB::table('teams')->where('id',$team_id)->first();
+   //dd($team);
+   return view('datepick',['team' => $team]);
+ }
+
  public function add()
  {
    return view('addteams');

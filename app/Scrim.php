@@ -6,13 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Scrim extends Model
 {
-  public function relatedPlanning()
+  /*public function planning()
   {
     return $this->belongsTo(Planning::class);
   }
-
-  public function relatedTeam()
+*/
+  public function team()
   {
-    return $this->belongsTo(Team::class);
+    return $this->hasMany(Team::class);
   }
 }

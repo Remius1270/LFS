@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class UserController extends Controller
+class UserController extends LFSCore
 {
   public function index()
   {
@@ -20,16 +20,16 @@ class UserController extends Controller
 
   public function create(Request $request)
   {
-    $user = new User();
+    /*$user = new User();
     $user->description = $request->description;
     $user->user_id = Auth::id();
     $user->save();
-    return redirect('/');
+    return redirect('/');*/
   }
 
-  public function edit(Task $task)
+  public function edit(User $user)
   {
-    if (Auth::check() && Auth::user()->id == $user->user_id)
+    if (Auth::check() && Auth::user()->id == $user->id_user)
     {
         return view('edit', compact('task'));
     }

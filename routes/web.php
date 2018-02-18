@@ -17,13 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home',function(){
-  return view('home');
-});
-
-//Auth
-Route::get("/login", "Auth/LoginController@index");
-Route::get("/register", "Auth/RegisterController@index");
+Route::get('/home',"HomeController@index");
 
 //team
 Route::get("/team/{id_team}", "TeamController@showTeam");

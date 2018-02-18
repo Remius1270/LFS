@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('partials/header')
 
 @section('content')
 <div class="container">
@@ -24,7 +24,6 @@
                                     </form>
                                 </td>
                             </tr>
-
 
                         @endforeach</tbody>
                         </table>

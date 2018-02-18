@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Planning extends Model
 {
-  public function relatedScrims()
+  /*public function relatedScrims()
   {
     return $this->hasMany(Scrim::class);
   }
@@ -14,5 +14,5 @@ class Planning extends Model
   public function getTeam()
   {
     return $this->belongsTo(Team::class);
-  }
+  }*/
 }
